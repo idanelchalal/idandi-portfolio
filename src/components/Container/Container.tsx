@@ -1,16 +1,18 @@
 import { FC } from "react";
 
-interface ContainerProps {
+interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
 }
 
-const Container: FC<ContainerProps> = ({ children }) => {
+const Container: FC<ContainerProps> = ({ ...props }: ContainerProps) => {
   return (
     <div
-      id="container"
-      className="flex flex-col justify-center items-center w-screen text-secondary-purple"
+      {...props}
+      className={`flex flex-col justify-center items-center w-screen px-6 md:px-28 py-12 text-white ${
+        props.className !== undefined ? props.className : ""
+      }`}
     >
-      {children}
+      {props.children}
     </div>
   );
 };

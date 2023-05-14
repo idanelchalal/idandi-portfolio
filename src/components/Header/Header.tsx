@@ -9,7 +9,7 @@ interface HeaderProps {}
 
 const Header: FC<HeaderProps> = ({}) => {
   return (
-    <header className="px-6 md:px-28 py-12 w-full flex flex-co justify-between items-center relative flex-wrap">
+    <header className="w-full flex justify-between items-center relative flex-wrap">
       <div
         id="logo-container"
         className="
