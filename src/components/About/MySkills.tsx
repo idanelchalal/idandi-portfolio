@@ -8,7 +8,7 @@ const MySkills: FC = () => {
   return (
     <>
       <section id="Skills section">
-        <div className="p-6">
+        <div className="py-6 text-center">
           <Title title="My Skills" titleColor="purple" />
         </div>
         <div className="flex flex-wrap">
