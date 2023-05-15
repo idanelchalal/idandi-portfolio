@@ -36,7 +36,7 @@ const Introduction: FC = ({}) => {
                 innovative and user-friendly software solutions.
               </span>
               <Button
-                handleClick={() => router.push("/Contact")}
+                handleClick={() => router.push("/#Contact-section")}
                 intent="purple"
                 outline
               >
