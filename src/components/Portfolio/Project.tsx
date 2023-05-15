@@ -40,14 +40,25 @@ const Project: FC<ProjectProps> = ({ gitUrl, imgSrc, title }) => {
           <FaRegHandPointer size={24} onClick={() => router.replace(gitUrl)} />
         </div>
       </div>
-      <div
-        onClick={() => router.replace(gitUrl)}
-        className="w-full bg-secondary-black/50 absolute top-1/2 z-20  group-hover:block hidden transition text-center py-4 cursor-pointer"
-      >
-        {title}
+      <div className="w-full absolute top-1/2 z-20 group-hover:block hidden transition text-center py-4 ">
+        <div className="flex flex-col justify-center gap-3">
+          <h1 className="text-secondary-purple">{title}</h1>
+          <div>
+            <span
+              onClick={() => router.push(gitUrl)}
+              className="cursor-pointer bg-secondary-purple/50 px-4 py-2 rounded-lg"
+            >
+              View Repository
+            </span>
+          </div>
+        </div>
       </div>
       <Image
+        loading="lazy"
+        placeholder="blur"
+        blurDataURL="data:image/png"
         src={imgSrc}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         alt={`icon ${title}`}
         referrerPolicy="no-referrer"
         className="mx-auto object-contain group-hover:scale-125 aspect-video transition p-3 "

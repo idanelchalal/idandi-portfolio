@@ -1,4 +1,5 @@
 import About from "@/components/About/About";
+import Contact from "@/components/Contact/Contact";
 import Portfolio from "@/components/Portfolio/Portfolio";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <About />
       <Portfolio />
+      <Contact />
     </>
   );
 }
