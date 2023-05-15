@@ -1,32 +1,39 @@
 "use client";
+import clsx from "clsx";
 import React, { FC } from "react";
 
-interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+interface ButtonProps {
+  handleClick: () => void;
   outline?: boolean;
-  theme?: string;
+  intent: "cyan" | "gray" | "purple";
+  children?: React.ReactNode;
 }
 
-const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
-  const selectedTheme = props.theme ? `${props.theme}` : "secondary-purple";
+const Button: FC<ButtonProps> = ({
+  children,
+  intent = "cyan",
+  outline = false,
+  handleClick,
+}: ButtonProps) => {
+  const clickHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+    handleClick();
+  };
 
   return (
     <button
-      {...props}
-      className={`
-      transition
-      text-base
-      text-${selectedTheme}
-      py-2
-      px-4
-      rounded-md
-    ${
-      props.outline
-        ? `hover:bg-${selectedTheme} hover:bg-opacity-80 bg-transparent border-2 border-${selectedTheme} hover:text-white`
-        : `bg-${selectedTheme} bg-opacity-80 hover:bg-opacity-100 text-white`
-    } 
-  `}
+      onClick={(e) => clickHandler(e)}
+      className={clsx(
+        "transition py-2 px-4 border-2 rounded-md text-base opacity-[85%] hover:opacity-100",
+        {
+          "bg-secondary-black border-secondary-black": intent === "gray",
+          "bg-secondary-purple border-secondary-purple": intent === "purple",
+          "bg-secondary-cyan border-secondary-cyan": intent === "cyan",
+          "bg-transparent": outline,
+        }
+      )}
     >
-      {props.children}
+      {children}
     </button>
   );
 };
