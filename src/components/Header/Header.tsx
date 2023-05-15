@@ -41,9 +41,16 @@ const Header: FC<HeaderProps> = ({}) => {
         </div>
       </div>
       <div id="navbar" className="flex gap-4 text-secondary-black md:text-xl">
-        <HeaderLink href="#Intro-container">About</HeaderLink>
+        <HeaderLink href="idandi-portfolio/#Intro-container">About</HeaderLink>
+        <HeaderLink href="idandi-portfolio/#Portfolio-section">
+          Portfolio
+        </HeaderLink>
+        <HeaderLink href="idandi-portfolio/#Contact-section">
+          Contact
+        </HeaderLink>
+        {/* <HeaderLink href="#Intro-container">About</HeaderLink>
         <HeaderLink href="#Portfolio-section">Portfolio</HeaderLink>
-        <HeaderLink href="#Contact-section">Contact</HeaderLink>
+        <HeaderLink href="#Contact-section">Contact</HeaderLink> */}
       </div>
       <div id="icons-stack" className="flex gap-4">
         <Link href="http://www.github.com/idanelchalal">
