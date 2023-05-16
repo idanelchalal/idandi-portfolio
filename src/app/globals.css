@@ -5,13 +5,13 @@
 
 
 html{
-    scroll-snap-type: mandatory y;
-    scroll-behavior: smooth;
+    scroll-snap-type: mandatory y !important;
+    scroll-behavior: smooth !important;
 }
 
 section{
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
 }
 
 body,html{
