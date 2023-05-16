@@ -11,7 +11,7 @@ import Image from "next/image";
 const MySkills: FC = () => {
   return (
     <>
-      <section id="Skills section">
+      <section id="skills-section">
         <div className="py-6 flex justify-center items-center">
           <Image
             src={AvatarIdea}

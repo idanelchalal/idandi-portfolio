@@ -11,7 +11,7 @@ interface PortfolioProps {}
 const Portfolio: FC<PortfolioProps> = ({}) => {
   return (
     <div>
-      <section id="Portfolio-section">
+      <section id="portfolio-section">
         <div className="py-6 flex justify-center items-center">
           <Image
             src={Avatar}

@@ -48,15 +48,15 @@ const Header: FC<HeaderProps> = ({}) => {
         <HeaderLink href="idandi-portfolio/#Contact-section">
           Contact
         </HeaderLink> */}
-        <HeaderLink href="#Intro-container">About</HeaderLink>
-        <HeaderLink href="#Portfolio-section">Portfolio</HeaderLink>
-        <HeaderLink href="#Contact-section">Contact</HeaderLink>
+        <HeaderLink href="#intro-container">About</HeaderLink>
+        <HeaderLink href="#portfolio-section">Portfolio</HeaderLink>
+        <HeaderLink href="#contact-section">Contact</HeaderLink>
       </div>
       <div id="icons-stack" className="flex gap-4">
-        <Link href="http://www.github.com/idanelchalal">
+        <Link href="https://www.github.com/idanelchalal">
           <AiFillGithub className="text-3xl" />
         </Link>
-        <Link href="http://www.linkedin.com/in/idanelchalal">
+        <Link href="https://www.linkedin.com/in/idanelchalal">
           <AiFillLinkedin className="text-3xl" />
         </Link>
       </div>

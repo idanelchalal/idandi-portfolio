@@ -9,7 +9,7 @@ const ContactCard: FC<ContactCardProps> = ({}) => {
   return (
     <>
       <div
-        id="Contact-section"
+        id="contact-section"
         className="flex flex-col w-full max-w-md lg:max-w-lg rounded-lg bg-zinc-500 border-2 border-slate-300"
       >
         <div className="py-2 px-4 flex gap-4  items-center basis-1/4">

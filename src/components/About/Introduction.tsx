@@ -13,9 +13,12 @@ const Introduction: FC = ({}) => {
   const router = useRouter();
   return (
     <>
-      <Container id="Intro-container">
+      <Container id="intro-container">
         <div className="flex relative w-4/5 overflow-hidden">
-          <section className="relative z-10 flex flex-col justify-between ">
+          <section
+            id="intro-section"
+            className="relative z-10 flex flex-col justify-between "
+          >
             <p className="text-2xl">
               I&apos;M{" "}
               <span className="mx-0.5 text-5xl text-secondary-purple font-serif font-semibold">

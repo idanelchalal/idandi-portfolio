@@ -4,6 +4,14 @@
 
 
 
+html{
+    scroll-snap-type: mandatory y;
+}
+
+section{
+    scroll-snap-align: start;
+}
+
 body,html{
     overflow-x: hidden;
     padding: 0;
