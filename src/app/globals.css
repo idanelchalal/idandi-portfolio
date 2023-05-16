@@ -6,10 +6,12 @@
 
 html{
     scroll-snap-type: mandatory y;
+    scroll-behavior: smooth;
 }
 
 section{
     scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 body,html{
